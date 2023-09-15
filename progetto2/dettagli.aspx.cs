@@ -14,6 +14,10 @@ namespace progetto2
         protected void Page_Load(object sender, EventArgs e)
         {
             prodotto = Negozio.negozio.Find((p) => p.id == Convert.ToInt32(Request.QueryString["id"]));
+            if (prodotto == null)
+            {
+                Response.Redirect("default.aspx");
+            }
             nomeProdotto.InnerHtml = prodotto.Name;
             descrizione.InnerHtml = prodotto.dattagli;
             Image1.ImageUrl = "Content/img/" + prodotto.foto;
