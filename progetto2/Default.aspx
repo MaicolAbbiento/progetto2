@@ -2,15 +2,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-       <asp:Repeater ID="Repeater1" runat="server" ItemType="progetto2.Carrello">
-                   <ItemTemplate>
-                       <div class="col-md-4 mt-5">
-                           <div style="width:50%">
-                               <img src="Content/img/<%# Item.foto %>"/>
-                           </div>
-                           <p><strong><%# Item.Name%></strong> <strong><%# Item.Name %></strong></p>
-                         <a class="btn btn-success" href="dettagli.aspx?id=<%# Item.id %>">dettagli</a>
-                       </div>
-                   </ItemTemplate>
-               </asp:Repeater>
+    <div class="row">
+    <asp:Repeater ID="Repeater1" runat="server" ItemType="progetto2.Carrello">
+        <ItemTemplate>
+            <div class="col-md-4 mt-5">
+    
+                <div class="card" style="width: 18rem;">
+                    <img src="Content/img/<%# Item.foto %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong><%# Item.Name%></strong></h5>
+                        <p class="card-text"><%# Item.Description%></p>
+                        <a href="dettagli.aspx?id=<%# Item.id %>"" class="btn btn-primary">dettagli</a>
+                    </div>
+                </div>
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
+
+    </div>
 </asp:Content>
