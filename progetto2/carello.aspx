@@ -7,8 +7,8 @@
         <ItemTemplate>
 
 
-            <div class="d-flex justify-content-evenly bg-white align-items-center">
-                <img src="Content/img/<%# Item.foto %>" class="img-elimina" alt="...">
+            <div class="d-flex justify-content-between bg-white align-items-center">
+                <img src="Content/img/<%# Item.foto %>" class="img-elimina ms-2 my-2" alt="...">
                 <h5 class="card-title"><strong><%# Item.Name%></strong></h5>
 
 
