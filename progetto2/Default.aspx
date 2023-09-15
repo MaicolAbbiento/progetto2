@@ -7,7 +7,7 @@
         <ItemTemplate>
             <div class="col-md-4 mt-5">
     
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem; height:660px">
                     <img src="Content/img/<%# Item.foto %>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><strong><%# Item.Name%></strong></h5>

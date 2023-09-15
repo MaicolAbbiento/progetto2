@@ -15,6 +15,8 @@ namespace progetto2
         {
             prodotto = Negozio.negozio.Find((p) => p.id == Convert.ToInt32(Request.QueryString["id"]));
             nomeProdotto.InnerHtml = prodotto.Name;
+            descrizione.InnerHtml = prodotto.dattagli;
+            Image1.ImageUrl = "Content/img/" + prodotto.foto;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
