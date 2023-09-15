@@ -22,6 +22,7 @@
       <asp:Button Text="vedi un prodotto casuale" CssClass=" navbar-brand btn  btn-warning" runat="server" OnClick ="Unnamed_Click" />
   </div>
 </nav>
+            <h1 class=" text-center"> LIBROMANIA </h1>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

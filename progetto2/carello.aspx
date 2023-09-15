@@ -2,25 +2,25 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="row">
+
     <asp:Repeater ID="Repeater1" runat="server" ItemType="progetto2.Carrello">
         <ItemTemplate>
-            <div class="col-md-4 mt-5">
-    
-                <div class="card" style="width: 18rem; height:660px">
-                    <img src="Content/img/<%# Item.foto %>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"><strong><%# Item.Name%></strong></h5>
-                        <p class="card-text"><%# Item.Description%></p>
-                        <asp:Button ID="Button1" runat="server" Text="elimina elemento" CssClass="btn-danger btn"  OnClick ="Button1_Click" CommandArgument='<%# Item.id %> '/>
-                    </div>
-                </div>
+
+
+            <div class="d-flex justify-content-evenly bg-white align-items-center">
+                <img src="Content/img/<%# Item.foto %>" class="img-elimina" alt="...">
+                <h5 class="card-title"><strong><%# Item.Name%></strong></h5>
+
+
+                <asp:Button ID="Button1" runat="server" Text="elimina elemento" CssClass="btn-danger btn" OnClick="Button1_Click" CommandArgument='<%# Item.id %> ' />
+
+            </div>
             </div>
         </ItemTemplate>
     </asp:Repeater>
 
-    </div>
-    <asp:Button ID="Button1" runat="server" Text="svuota carello" CssClass="btn-danger btn"  OnClick ="Button1_Click2"/>
+
+    <asp:Button ID="Button1" runat="server" Text="svuota carello" CssClass="btn-danger btn mt-2"  OnClick ="Button1_Click2"/>
     <p id="totale" runat="server" > </p>
 
 </asp:Content>
